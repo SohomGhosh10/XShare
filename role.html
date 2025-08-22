@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Role - XShare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="role-container">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <h2><a href="index.html">XShare</a></h2>
+                </div>
+            </div>
+        </header>
+
+        <section class="role-selection">
+            <div class="container">
+                <div class="role-content">
+                    <h1>Select Your Role</h1>
+                    <p>Choose your role to get a personalized experience on XShare</p>
+                    
+                    <div class="role-cards">
+                        <div class="role-card" onclick="selectRole('student')">
+                            <div class="role-icon">🎓</div>
+                            <h3>Student</h3>
+                            <p>Share experiences, browse opportunities, and connect with peers</p>
+                            <button class="btn btn-primary">Select</button>
+                        </div>
+                        
+                        <div class="role-card" onclick="selectRole('academic')">
+                            <div class="role-icon">👨‍🏫</div>
+                            <h3>Academic</h3>
+                            <p>Guide students, share insights, and access academic resources</p>
+                            <button class="btn btn-primary">Select</button>
+                        </div>
+                        
+                        <div class="role-card" onclick="selectRole('guest')">
+                            <div class="role-icon">👤</div>
+                            <h3>Guest</h3>
+                            <p>Explore the platform and browse public experiences</p>
+                            <button class="btn btn-primary">Select</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
