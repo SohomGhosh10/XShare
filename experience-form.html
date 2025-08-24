@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Experience - XShare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="form-container">
+        <!-- Header -->
+        <div class="form-header">
+            <button class="back-btn" onclick="window.history.back()">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            <h1>Share Your Experience</h1>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Company Info</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Rounds</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Questions</div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Tips</div>
+                </div>
+                <div class="step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-label">Review</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Content -->
+        <div class="form-content">
+            <!-- Step 1: Company Information -->
+            <div class="step-content active" data-step="1">
+                <h2>Company Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="companyName">Company Name *</label>
+                        <input type="text" id="companyName" placeholder="e.g., Google, Microsoft, Amazon" list="companyList" required>
+                        <datalist id="companyList">
+                            <option value="Google">
+                            <option value="Microsoft">
+                            <option value="Amazon">
+                            <option value="Meta">
+                            <option value="Netflix">
+                            <option value="Apple">
+                            <option value="Uber">
+                            <option value="LinkedIn">
+                        </datalist>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Role *</label>
+                        <input type="text" id="role" placeholder="e.g., Software Engineer, Data Scientist" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobType">Job Type *</label>
+                        <select id="jobType" required>
+                            <option value="">Select job type</option>
+                            <option value="internship">Internship</option>
+                            <option value="fulltime">Full-time</option>
+                            <option value="parttime">Part-time</option>
+                            <option value="contract">Contract</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interviewDate">Interview Date *</label>
+                        <input type="date" id="interviewDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="e.g., Bangalore, Remote">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Result *</label>
+                        <div class="result-pills">
+                            <input type="radio" id="selected" name="result" value="selected" required>
+                            <label for="selected" class="result-pill selected">Selected</label>
+                            
+                            <input type="radio" id="rejected" name="result" value="rejected" required>
+                            <label for="rejected" class="result-pill rejected">Rejected</label>
+                            
+                            <input type="radio" id="hold" name="result" value="hold" required>
+                            <label for="hold" class="result-pill hold">On Hold</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Selection Rounds -->
+            <div class="step-content" data-step="2">
+                <h2>Interview Rounds</h2>
+                <p class="step-description">Select the rounds you went through during the interview process.</p>
+                
+                <div class="rounds-selection">
+                    <div class="round-option">
+                        <input type="checkbox" id="aptitude" name="rounds" value="aptitude">
+                        <label for="aptitude" class="round-label">
+                            <div class="round-icon">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                </svg>
+                            </div>
+                            <div class="round-info">
+                                <h4>Aptitude Test</h4>
+                                <p>Quantitative, Logical, Verbal reasoning</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="round-option">
+                        <input type="checkbox" id="technical" name="rounds" value="technical">
+                        <label for="technical" class="round-label">
+                            <div class="round-icon">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                </svg>
+                            </div>
+                            <div class="round-info">
+                                <h4>Technical Round</h4>
+                                <p>Coding, Problem solving, System design</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="round-option">
+                        <input type="checkbox" id="hr" name="rounds" value="hr">
+                        <label for="hr" class="round-label">
+                            <div class="round-icon">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div class="round-info">
+                                <h4>HR Round</h4>
+                                <p>Behavioral questions, Culture fit</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="round-option">
+                        <input type="checkbox" id="managerial" name="rounds" value="managerial">
+                        <label for="managerial" class="round-label">
+                            <div class="round-icon">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="round-info">
+                                <h4>Managerial Round</h4>
+                                <p>Leadership, Team fit, Final discussion</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Questions Asked -->
+            <div class="step-content" data-step="3">
+                <h2>Questions Asked</h2>
+                <p class="step-description">Share the questions you encountered in each round.</p>
+                
+                <div class="questions-section" id="questionsSection">
+                    <!-- Questions will be populated based on selected rounds -->
+                </div>
+            </div>
+
+            <!-- Step 4: Tips and Preparation -->
+            <div class="step-content" data-step="4">
+                <h2>Preparation Tips</h2>
+                <p class="step-description">Share your preparation strategy and tips for future candidates.</p>
+                
+                <div class="form-group">
+                    <label for="preparationTips">How did you prepare? *</label>
+                    <textarea id="preparationTips" rows="6" placeholder="Share your preparation strategy, resources used, time taken, key focus areas, etc." required></textarea>
+                    <div class="form-hint">Help others by sharing what worked for you</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="advice">Advice for Future Candidates</label>
+                    <textarea id="advice" rows="4" placeholder="Any specific advice or things you wish you knew before the interview?"></textarea>
+                </div>
+            </div>
+
+            <!-- Step 5: Upload and Review -->
+            <div class="step-content" data-step="5">
+                <h2>Review & Submit</h2>
+                <p class="step-description">Review your experience before submitting.</p>
+                
+                <div class="upload-section">
+                    <h3>Attachments (Optional)</h3>
+                    <div class="upload-area" onclick="document.getElementById('fileUpload').click()">
+                        <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24" class="upload-icon">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                        <p>Click to upload files</p>
+                        <p class="upload-hint">Screenshots, documents, or any relevant files</p>
+                        <input type="file" id="fileUpload" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" style="display: none;" onchange="handleFileUpload(event)">
+                    </div>
+                    <div class="uploaded-files" id="uploadedFiles"></div>
+                </div>
+
+                <div class="review-section">
+                    <h3>Experience Summary</h3>
+                    <div class="review-card" id="reviewCard">
+                        <!-- Review content will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="anonymous" name="anonymous">
+                        <span class="checkmark"></span>
+                        Post anonymously
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the community guidelines and terms of service
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="form-navigation">
+            <button type="button" class="btn btn-secondary" id="prevBtn" onclick="previousStep()" style="display: none;">
+                Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextStep()">
+                Next
+            </button>
+            <button type="button" class="btn btn-primary" id="submitBtn" onclick="submitExperience()" style="display: none;">
+                Submit Experience
+            </button>
+            <button type="button" class="btn btn-secondary" id="draftBtn" onclick="saveDraft()" style="display: none;">
+                Save as Draft
+            </button>
+        </div>
+
+        <!-- Helper Card -->
+        <div class="helper-card">
+            <h3>Why share your experience?</h3>
+            <ul>
+                <li>Help fellow students prepare better</li>
+                <li>Earn points and unlock rewards</li>
+                <li>Build your profile in the community</li>
+                <li>Get feedback and insights from others</li>
+                <li>Contribute to collective knowledge</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            
+            // Update step indicators
+            document.querySelectorAll('.step').forEach((step, index) => {
+                const stepNumber = index + 1;
+                if (stepNumber < currentStep) {
+                    step.classList.add('completed');
+                    step.classList.remove('active');
+                } else if (stepNumber === currentStep) {
+                    step.classList.add('active');
+                    step.classList.remove('completed');
+                } else {
+                    step.classList.remove('active', 'completed');
+                }
+            });
+        }
+
+        function showStep(step) {
+            document.querySelectorAll('.step-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelector(`[data-step="${step}"]`).classList.add('active');
+            
+            // Update navigation buttons
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            const draftBtn = document.getElementById('draftBtn');
+            
+            prevBtn.style.display = step > 1 ? 'block' : 'none';
+            nextBtn.style.display = step < totalSteps ? 'block' : 'none';
+            submitBtn.style.display = step === totalSteps ? 'block' : 'none';
+            draftBtn.style.display = step === totalSteps ? 'block' : 'none';
+            
+            updateProgress();
+        }
+
+        function nextStep() {
+            if (validateCurrentStep() && currentStep < totalSteps) {
+                if (currentStep === 2) {
+                    updateQuestionsSection();
+                } else if (currentStep === 4) {
+                    updateReviewSection();
+                }
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+
+        function validateCurrentStep() {
+            const currentStepContent = document.querySelector(`[data-step="${currentStep}"]`);
+            const requiredFields = currentStepContent.querySelectorAll('input[required], textarea[required], select[required]');
+            
+            for (let field of requiredFields) {
+                if (field.type === 'radio') {
+                    const radioGroup = currentStepContent.querySelectorAll(`input[name="${field.name}"]`);
+                    const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+                    if (!isChecked) {
+                        showToast('Please fill all required fields', 'error');
+                        return false;
+                    }
+                } else if (!field.value.trim()) {
+                    showToast('Please fill all required fields', 'error');
+                    field.focus();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function updateQuestionsSection() {
+            const questionsSection = document.getElementById('questionsSection');
+            const selectedRounds = Array.from(document.querySelectorAll('input[name="rounds"]:checked'));
+            
+            questionsSection.innerHTML = '';
+            
+            selectedRounds.forEach(round => {
+                const roundValue = round.value;
+                const roundName = round.nextElementSibling.querySelector('h4').textContent;
+                
+                const questionGroup = document.createElement('div');
+                questionGroup.className = 'question-group';
+                questionGroup.innerHTML = `
+                    <h3>${roundName}</h3>
+                    <div class="form-group">
+                        <label for="${roundValue}Questions">Questions Asked</label>
+                        <textarea id="${roundValue}Questions" rows="4" placeholder="${getPlaceholderText(roundValue)}" required></textarea>
+                        <div class="form-hint">Be specific and detailed to help others prepare</div>
+                    </div>
+                `;
+                questionsSection.appendChild(questionGroup);
+            });
+        }
+
+        function getPlaceholderText(roundType) {
+            const placeholders = {
+                aptitude: 'e.g., Questions on quantitative aptitude, logical reasoning, data interpretation, etc.',
+                technical: 'e.g., Coding problems, algorithms, system design questions, technical concepts discussed, etc.',
+                hr: 'e.g., Tell me about yourself, why this company, situational questions, etc.',
+                managerial: 'e.g., Leadership scenarios, team conflicts, project management questions, etc.'
+            };
+            return placeholders[roundType] || 'Describe the questions you were asked...';
+        }
+
+        function updateReviewSection() {
+            const reviewCard = document.getElementById('reviewCard');
+            const companyName = document.getElementById('companyName').value;
+            const role = document.getElementById('role').value;
+            const jobType = document.getElementById('jobType').value;
+            const result = document.querySelector('input[name="result"]:checked')?.value;
+            const selectedRounds = Array.from(document.querySelectorAll('input[name="rounds"]:checked'));
+            
+            reviewCard.innerHTML = `
+                <div class="review-header">
+                    <h4>${role} at ${companyName}</h4>
+                    <span class="status-badge ${result}">${result?.charAt(0).toUpperCase() + result?.slice(1)}</span>
+                </div>
+                <div class="review-details">
+                    <div class="review-item">
+                        <strong>Job Type:</strong> ${jobType}
+                    </div>
+                    <div class="review-item">
+                        <strong>Interview Date:</strong> ${document.getElementById('interviewDate').value}
+                    </div>
+                    <div class="review-item">
+                        <strong>Rounds:</strong> ${selectedRounds.map(r => r.nextElementSibling.querySelector('h4').textContent).join(', ')}
+                    </div>
+                    <div class="review-item">
+                        <strong>Location:</strong> ${document.getElementById('location').value || 'Not specified'}
+                    </div>
+                </div>
+            `;
+        }
+
+        function handleFileUpload(event) {
+            const files = Array.from(event.target.files);
+            const uploadedFiles = document.getElementById('uploadedFiles');
+            
+            files.forEach(file => {
+                const fileChip = document.createElement('div');
+                fileChip.className = 'file-chip';
+                fileChip.innerHTML = `
+                    <span class="file-name">${file.name}</span>
+                    <button type="button" class="remove-file" onclick="this.parentElement.remove()">×</button>
+                `;
+                uploadedFiles.appendChild(fileChip);
+            });
+        }
+
+        function submitExperience() {
+            if (!validateCurrentStep()) return;
+            
+            // TODO: Submit experience to backend
+            showToast('Experience submitted successfully! Pending review.', 'success');
+            setTimeout(() => {
+                window.location.href = 'experiences.html';
+            }, 2000);
+        }
+
+        function saveDraft() {
+            // TODO: Save as draft
+            showToast('Draft saved successfully!', 'success');
+        }
+
+        function showToast(message, type) {
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Initialize
+        showStep(1);
+    </script>
+</body>
+</html>

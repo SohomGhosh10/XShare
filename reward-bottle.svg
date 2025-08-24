@@ -1,0 +1,7 @@
+<svg width="200" height="200" view Box="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#f8fafc"/>
+  <rect x="70" y="40" width="60" height="120" rx="30" fill="#5b61ff"/>
+  <rect x="75" y="30" width="50" height="20" rx="10" fill="#4338ca"/>
+  <circle cx="100" cy="100" r="15" fill="white" opacity="0.3"/>
+  <text x="100" y="180" text-anchor="middle" fill="#64748b" font-size="12" font-family="system-ui">XShare Bottle</text>
+</svg>
