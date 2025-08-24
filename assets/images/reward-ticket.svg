@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#f8fafc"/>
+  <rect x="40" y="70" width="120" height="60" rx="8" fill="#5b61ff"/>
+  <circle cx="40" cy="100" r="10" fill="#f8fafc"/>
+  <circle cx="160" cy="100" r="10" fill="#f8fafc"/>
+  <rect x="90" y="85" width="20" height="30" fill="white" opacity="0.3"/>
+  <text x="100" y="180" text-anchor="middle" fill="#64748b" font-size="12" font-family="system-ui">Conference Ticket</text>
+</svg>
