@@ -1,7 +1,0 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" fill="#f8fafc"/>
-  <path d="M100 40C75 40 55 60 55 85v30h20V85c0-14 11-25 25-25s25 11 25 25v30h20V85c0-25-20-45-45-45z" fill="#1f2937"/>
-  <rect x="45" y="105" width="30" height="40" rx="15" fill="#374151"/>
-  <rect x="125" y="105" width="30" height="40" rx="15" fill="#374151"/>
-  <text x="100" y="180" text-anchor="middle" fill="#64748b" font-size="12" font-family="system-ui">Headphones</text>
-</svg>

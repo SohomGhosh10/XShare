@@ -1,7 +1,0 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" fill="#f8fafc"/>
-  <circle cx="80" cy="80" r="25" fill="#5b61ff"/>
-  <circle cx="120" cy="90" r="20" fill="#6ee0ff"/>
-  <rect x="70" y="110" width="60" height="40" rx="20" fill="#16a34a"/>
-  <text x="100" y="180" text-anchor="middle" fill="#64748b" font-size="12" font-family="system-ui">Sticker Pack</text>
-</svg>

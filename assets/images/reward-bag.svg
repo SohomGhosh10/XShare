@@ -1,8 +1,0 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" fill="#f8fafc"/>
-  <rect x="60" y="70" width="80" height="90" rx="8" fill="#1f2937"/>
-  <rect x="85" y="50" width="30" height="30" rx="4" fill="#374151"/>
-  <rect x="70" y="80" width="60" height="4" fill="#5b61ff"/>
-  <circle cx="100" cy="110" r="8" fill="#6ee0ff"/>
-  <text x="100" y="180" text-anchor="middle" fill="#64748b" font-size="12" font-family="system-ui">Premium Bag</text>
-</svg>
